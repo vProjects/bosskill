@@ -1,0 +1,155 @@
+<!DOCTYPE  HTML>
+<html lang="en">
+    <head>
+        <title>Kill Your Boss</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="dist/css/bootstrap-theme.css" />
+        <link rel="stylesheet" href="dist/css/style.css" />
+        
+    </head>
+    <body class="default">
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Kill The Boss</a>
+                  </div>
+                
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Link</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.navbar-collapse -->
+                </nav>
+            <div class="row">
+              <div class="col-md-10">
+                  <div class="col-md-6">
+                    <img src="img/kill.png" id="kill" class="img-responsive" alt="Responsive image" />
+                  </div>
+                  <div class="col-md-6">
+                      <h1>Aaj kuch toofani karte hai</h1>
+                      <div class="mainText">
+                          <h6>To My,</h6>
+                          <h6>Dear Boss</h6>
+                          <label>Email</label><input type="text" id="bossEmail" name="email">
+                          <textarea id="booslove"></textarea>
+                          <input type="button" class="btn btn-danger" id="sendButton" value="send mail" />
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-2">
+                  <img src="img/2014.png" id="2014" class="img-responsive" alt="Responsive image" />
+              </div>
+            </div>
+            <div class="row intro">
+                <div class="col-md-7 introContent">
+                    <h4>How to use this App</h4>
+                    <a href=""><span class="glyphicon glyphicon-arrow-right"></span></a>
+                </div>
+                <div class="col-md-5">
+                   <div class="video-container">
+                        <img src="img/videoEntro.png" class="videoContainer" alt="video intro"/> 
+                         <iframe width="560" height="315" src="//www.youtube.com/embed/BzE1mX4Px0I" frameborder="0" allowfullscreen></iframe>  
+                    </div>
+                </div>    
+               
+           </div>
+           <div class="row like">
+               <div class="row share">
+                   <h1>If you like this page please share on</h1> 
+               </div>
+               <div class="row share">
+                   <div class="col-md-4">Like Us on Facebook<div id="share-facebook" class=""></div></div>
+                   <div class="col-md-4">Follow Us on Twitter<div id="share-twitter"></div></div>
+                   <div class="col-md-4">Connect with us on Linkedin<div id="share-linkedin"></div></div>
+               </div>
+           </div>
+           <!-- footer -->
+           <div class="row footer">
+               <div class="col-md-4">
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+               </div>
+               <div class="col-md-4">
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+               </div>
+               <div class="col-md-4">
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+                   <p>This is new</p>
+               </div>
+           </div>
+           <div class="row attribution">
+               <div class="rowBottom">Design and Developed by <a href="http://www.vyrazu.com">Vyrazu Labs</a></div>
+           </div>
+           
+           
+        </div>
+        
+        <script src="dist/js/jquery-1.10.2.min.js"></script>
+        <script src="dist/js/jQueryRotate.js"></script>
+        <script src="dist/js/bootstrap.js"></script>
+        <script>
+        $("#kill").rotate({ 
+           bind: 
+             { 
+                mouseover : function() { 
+                    $(this).rotate({animateTo:180})
+                },
+                mouseout : function() { 
+                    $(this).rotate({animateTo:0})
+                }
+             } 
+           
+        });
+        var i =1;
+        $( ".introContent h4" ).mouseover(function() {
+              if(i==1){
+              $(".video-container").css({
+                  'position': 'absolute',
+                  'top': '-1129px',
+                  'display': 'block'
+                  });
+              //for(i=0;i<22;i++)
+                $( ".video-container" ).animate({ "top": "+=1129px" }, "fast" );
+                $( ".video-container" ).animate({ "top": "-=50px" }, "slow" );
+                $( ".video-container" ).animate({ "top": "+=50px" }, "slow" );
+                $( ".video-container" ).animate({ "top": "-=30px" }, "slow" );
+                $( ".video-container" ).animate({ "top": "+=30px" }, "slow" );
+                
+             $(".video-container").css({
+                 'position': 'relative',
+             });
+            i++;
+            }
+        });
+       
+        </script>
+    </body>
+    
+</html>
